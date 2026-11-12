@@ -1,4 +1,4 @@
-# ⚡ Sink
+# ⚡ VENI LINK
 
 **A Simple, Speedy, Secure, and Serverless Link Shortener with Analytics, Running Entirely on Cloudflare.**
 
