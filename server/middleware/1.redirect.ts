@@ -222,6 +222,13 @@ export default eventHandler(async (event) => {
       return sendRedirect(event, finalTargetUrl, +redirectStatusCode)
     }
     else {
+      try {
+        notifyMissingLink(event, slug)
+      }
+      catch {
+        console.error({ event: 'telegram.scheduling.failed' })
+      }
+
       if (notFoundRedirect) {
         return sendRedirect(event, notFoundRedirect, 302)
       }
